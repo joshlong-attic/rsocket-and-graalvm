@@ -8,6 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
 import java.util.Collections;
@@ -21,6 +23,17 @@ public class RsocketAndGraalApplication {
 	}
 }
 
+// http
+@RestController
+class GreetingHttpController {
+
+	@GetMapping("/hello")
+	Greeting greeting() {
+		return new Greeting("Hello, world");
+	}
+}
+
+// rsocket
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
