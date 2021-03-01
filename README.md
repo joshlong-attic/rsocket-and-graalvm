@@ -1,18 +1,13 @@
 # RSocket and GraalVM
 
-Run: 
 
-`mvn -Pnative-image clean package `
-
-then run the application: 
-
-`java -jar target/com.example.rsocketandgraal.rsocketandgraalapplication`
 
 ## Buildpacks: 
 
-Run: 
+Run the following command and then wait a minute or two: 
 
-`mvn spring-boot:build-image` 
+`mvn spring-boot:build-image`
+
 
 then run the application:
 
